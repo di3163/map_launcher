@@ -162,7 +162,7 @@ String getMapDirectionsUrl({
         url: 'yandexmaps://maps.yandex.com/',
         queryParams: {
           'rtext':
-              '${origin?.latitude},${origin?.longitude}~${destination.latitude},${destination.longitude}',
+              '${destination.latitude},${destination.longitude}~${origin?.latitude},${origin?.longitude}',
           'rtt': Utils.getYandexMapsDirectionsMode(directionsMode),
           ...(extraParams ?? {}),
         },
